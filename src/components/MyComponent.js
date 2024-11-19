@@ -3,6 +3,7 @@
 
 import React from "react";
 
+
 class MyComponent extends React.Component {
 
     state = {
@@ -11,13 +12,25 @@ class MyComponent extends React.Component {
         age: 26
     };
 
+    handleClick(event){
+        // console.log(">>> click me button")
+        console.log(event.target)
+    }
+
+    handleOnMouseOver(event){
+        console.log(event.pageX);
+    }
+
+
+
     // JSX
     render() {
         return (
             <div>
                 
-                My name is: {this.state.name}
-                and I'm from {this.state.address}
+                My name is: {this.state.name} and I'm from {this.state.address}
+                <button onClick={this.handleClick}>Click me</button>
+                <button onMouseOver={this.handleOnMouseOver}>Hover me</button>
             </div>
         );
     }

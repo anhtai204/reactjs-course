@@ -36,15 +36,21 @@ class MyComponent extends React.Component {
     render() {
         const myAge = 26;
         return (
-            <div>
-                <AddUserInfor
-                    handleAddNewUser={this.handleAddNewUser}
-                />
-                <br></br>
-                <DisplayInfor 
-                    listUsers={this.state.listUsers}
-                />
-            </div>
+            <>
+                <div className="a">
+                    <AddUserInfor
+                        handleAddNewUser={this.handleAddNewUser}
+                    />
+                    <br></br>
+                    <DisplayInfor 
+                        listUsers={this.state.listUsers}
+                    />
+                </div>
+
+                <div className="b">
+
+                </div>
+            </>
         );
     }
 } 

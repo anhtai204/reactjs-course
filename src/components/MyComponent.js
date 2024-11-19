@@ -2,7 +2,7 @@
 // function component
 
 import React from "react";
-import UserInfor from "./UserInfor";
+import AddUserInfor from "./AddUserInfor";
 import DisplayInfor from "./DisplayInfor";
 
 
@@ -17,14 +17,33 @@ class MyComponent extends React.Component {
         ] 
     }
 
+    handleAddNewUser = (userObject) => {
+        let listUsersNew = [...this.state.listUsers];
+        listUsersNew.unshift(userObject);
+        this.setState({
+            listUsers: listUsersNew
+        })
+
+
+
+        // console.log('>>> check data from parent: ', userObject);
+        // this.setState({
+        //     listUsers: [userObject, ...this.state.listUsers]
+        // })
+    }
+
     // JSX
     render() {
         const myAge = 26;
         return (
             <div>
-                <UserInfor/>
+                <AddUserInfor
+                    handleAddNewUser={this.handleAddNewUser}
+                />
                 <br></br>
-                <DisplayInfor listUsers={this.state.listUsers}/>
+                <DisplayInfor 
+                    listUsers={this.state.listUsers}
+                />
             </div>
         );
     }

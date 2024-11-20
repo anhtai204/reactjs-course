@@ -66,8 +66,8 @@ const DisplayInfor = (props) => {
                     {listUsers.map((user) => {
                         return (
                             <div key={user.id} className={+user.age>18 ? 'green' : 'red'}>
-                                <div>My name's is {user.name}</div>
-                                <div>My name's is {user.age}</div>
+                                <div>My name is {user.name}</div>
+                                <div>My age is {user.age}</div>
                                 <div>
                                     <button onClick={() => props.handleDeleteUser(user.id)}>Delete</button>
                                 </div>

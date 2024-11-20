@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UserInfor from "./AddUserInfor";
 import './DisplayInfor.scss';
 import logo from './../logo.svg';
@@ -53,6 +53,14 @@ const DisplayInfor = (props) => {
         // })
         setShowHideListUser(!isShowHideListUser);
     }
+
+    console.log('>>> call render')
+
+    useEffect(() => {
+        if(listUsers.length === 0){
+            alert('You deleted all users')
+        }
+    }, [listUsers]);
 
     return (
         <div className="display-infor-container">

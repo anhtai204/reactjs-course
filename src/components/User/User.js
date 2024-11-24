@@ -1,6 +1,9 @@
+import SideBar from "../Admin/SideBar";
+
 const User = (props) => {
     return (
-        <div>user component</div>
+        <div>user component
+        </div>
     )
 }
 

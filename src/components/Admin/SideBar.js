@@ -10,7 +10,7 @@ import {
 } from 'react-pro-sidebar';
 
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
-import sidebarBg from '../assets/bg2.jpg';
+import sidebarBg from '../../assets/bg2.jpg';
 import { DiReact } from 'react-icons/di'
 import { MdDashboard } from 'react-icons/md'
 import { Link } from 'react-router-dom';
